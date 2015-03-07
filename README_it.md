@@ -34,7 +34,7 @@ Ora tocca a Ionic, lo si installa attraverso _bower_ con:
 
 ### Ora si passa alla strutturazione del progetto.
 
-Ai aggiungono tutti i plugin di _Phonegap_ che interessano:
+Si aggiungono tutti i plugin di _Phonegap_ che interessano:
 
 	1.			phonegap local plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git 
 
