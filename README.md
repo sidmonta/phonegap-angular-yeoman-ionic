@@ -2,8 +2,8 @@
 How to create a mobile app with Phonegap, Angular, Yeoman and Ionic
 
 
-### Install all necessary
-It’s assumed to have already downloaded the various tools ([Phonegap](http://phonegap.com), [Cordova](http://cordova.apache.org), [Yeoman](http://yeoman.io), [Ionic](http://ionicframework.com) e il generatore per [Angular](https://github.com/yeoman/generator-angular) ).
+### Required install
+It’s assumed to have already downloaded all the tools ([Phonegap](http://phonegap.com), [Cordova](http://cordova.apache.org), [Yeoman](http://yeoman.io), [Ionic](http://ionicframework.com) and the [Angular](https://github.com/yeoman/generator-angular) generator ).
 
 Create a new Phonegap project:
 
@@ -20,23 +20,23 @@ Run the angular generator:
 
 		yo angular [myapp]
  
-Install a helful task for _grunt_:
+Install a helpful task for _grunt_:
 
 		npm install grunt-angular-phonegap —save-dev
 
-Now we add all platforms on which we want our application works with:
+Now add all platforms on which we want our application to works with:
 
 		cordova platform add [platform]
 
 replace [platform] width _android_, _ios_, _wp7_ o _wp8_.
 
-Now it’s time for Ionic, you install it through _bower_:
+Now it’s time for Ionic, install it through _bower_:
 
 		bower install ionic —save-dev
 
 ### Structure of the project
 
-Add all plugin of _Phonegap_ that interest us.
+Add all the required plugin of _Phonegap_.
 
 	1.			phonegap local plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git 
 
@@ -51,15 +51,17 @@ Add all plugin of _Phonegap_ that interest us.
 	6.			phonegap local plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git
 
 
-Add the reference to cordova:
+Add the cordova reference:
 
 		<script src=“cordova.js”></script>
 
 in the file _index.html_
 
-If bower didn’t add in automatic the reference of Ionic, do ourself.
+If bower it’s unable add the Ionic references, be sure to add it 
 
-Another change to think to do is update the target of Android in  _AndroidManifest_.
+Another think to do is update the target of Android in  _AndroidManifest_.
+
+Another thing we can do it’s modify the target of Android application in _AndroidMonifest_. 
 
 ### How to run it
 
@@ -67,15 +69,15 @@ First run the grunt server:
 
 		grunt serve
 
-For build the app for a specific platform use the grunt task previously installed:
+To build the app for a specific platform use the grunt task previously installed:
 
 		grunt phonegap:build:platform
 
-meanwhile for run the emulator use ionic:
+meanwhile to run the emulator use ionic:
 
 		ionic emulate platform
 
 ### Debug and Test
 
-The debug is possible, for iOS, by _Safari_ width the _Developers tool_.
-For the test in device look the reference of the Ionic App [here](http://apps.ionic.io/apps)
+The debug is possible for iOS, using _Safari_ by opening the  _Developers tool_.
+For the test in device look the references of the Ionic App [here](http://apps.ionic.io/apps)
